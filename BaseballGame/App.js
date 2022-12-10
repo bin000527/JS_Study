@@ -3,8 +3,6 @@
 
 let answer = []; //정답의 4자리 수가 저장되는 배열
 
-let try_num = 1; // 시도 횟수
-
 while(answer.length != 4){
     let num = Math.floor(Math.random() * 10); //1의 자리 난수 생성
     if(answer.indexOf(String(num)) == -1){ //중복되는 숫자가 없는 경우에만 추가
@@ -12,6 +10,7 @@ while(answer.length != 4){
     }
 }
 
+let try_num = 1; // 시도 횟수
 const btn_submit = document.getElementById("submit");
 
 btn_submit.addEventListener('click', () => {
