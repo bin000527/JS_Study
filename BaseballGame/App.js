@@ -1,11 +1,9 @@
-//쓰리아웃
+//10회 이상 틀릴 시 -> 쓰리아웃
 //중복 숫자 -> alert
 
+let answer = []; //정답의 4자리 수가 저장되는 배열
 
-//correct_answer : 랜덤으로 생성되는 정답이 저장되는 배열
-let answer = [];
-
-let try_num = 1;
+let try_num = 1; // 시도 횟수
 
 while(answer.length != 4){
     let num = Math.floor(Math.random() * 10); //1의 자리 난수 생성
@@ -27,7 +25,7 @@ btn_submit.addEventListener('click', () => {
     }
 });
 
-//중복숫자 유무, 길이
+//중복숫자가 있는지, 4개의 숫자가 입력됐는지 확인
 function isValid(input){
     if(input.length != 4){
         alert("숫자 4자리를 입력해주세요!");
@@ -55,7 +53,7 @@ function check_answer(input, answer){
     return [strike, ball];
 }
 
-//입력 결과 출력 함수
+//결과 출력 함수
 function print_result(result, input, try_num){
     let innerHTML = `<br/>${try_num}차 시도 : ${input.join("")}, `;
     if(result[0] == 4){
