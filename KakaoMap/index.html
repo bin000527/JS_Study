@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kakao Map</title>
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=80c9b4c79325bed75dcc43d5051305a4&libraries=services,clusterer,drawing"
+        ></script>
+    </head>
+    <body>
+        <div id="map" style="width: 1000px; height: 400px"></div>
+        <input
+            type="button"
+            id="btn-markCafes"
+            value="강남역 카페 3개 표시하기"
+        />
+        <input type="button" id="btn-getLocation" value="현 위치조회하기" />
+        <br />
+        <input
+            type="text"
+            id="text-searchPlace"
+            placeholder="검색어를 입력하세요"
+        />
+        <input type="button" id="btn-searchPlace" value="장소 검색하기" />
+        <script src="script.js"></script>
+    </body>
+</html>
