@@ -1,13 +1,10 @@
-main, body{
-    height: 100%;
-}
 section{
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 600px;
     padding: 20px;
     border: 2px solid #000;
     background-color: #ccc;
@@ -39,11 +36,6 @@ section{
     align-items: center;
     justify-self: center;
     border: 2px solid #aaa;
-
-    /* width: 100%;
-    height: 100%; */
-    /* max-width: 100%;
-    max-height: 100%; */
 }
 
 .image_wrap canvas{
@@ -57,8 +49,8 @@ section{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
+    height: 50px;
+    margin-top: 10px;
     border: 2px dashed #6c67e3;
     color: #4f49ec;
 }
@@ -76,9 +68,6 @@ section{
 .button_wrap{
     display: flex;
     flex-direction: column;
-    /* position: absolute;
-    right: 15px;
-    bottom: 20px; */
 }
 
 .button_wrap button{
