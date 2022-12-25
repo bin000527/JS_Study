@@ -42,10 +42,15 @@ class PhotoEditor{
 		this.fileInput = get(".drag_area input");
 
 		this.fileImage = get(".fileImage");
+
+		this.controller = get(".control_wrap");
+		this.controller.style.visibility = "hidden";
+		this.ctr_brightness = get("#brightness");
 		
 		this.drawEvent(); //크롭 이벤트
 		this.clickEvent(); //버튼 클릭 이벤트
 		this.fileEvent(); //파일 변경 이벤트
+		this.brightnessEvent(); //명도 조절
 	}
 
 	drawEvent(){
@@ -114,6 +119,8 @@ class PhotoEditor{
 		});
         
 		this.targetImage.appendChild(this.targetCanvas);
+		this.controller.style.visibility = "visible";
+		
 	}
 
 	clickEvent() {
@@ -194,6 +201,25 @@ class PhotoEditor{
 			});
 			this.fileImage.setAttribute("src", fileName);
 			img.setAttribute("src", fileName);
+		});
+	}
+
+	brightnessEvent(){ //명도 조절
+		this.ctr_brightness.addEventListener("change", (e)=>{
+			let bvalue = e.target.value;
+			this.targetCtx.clearRect(0,0,this.targetWidth, this.targetHeight);
+			this.targetCtx.filter = `brightness(${bvalue*0.01})`;
+			this.targetCtx.drawImage(
+				this.img,
+				this.sourceX,
+				this.sourceY,
+				this.sourceWidth,
+				this.sourceHeight,
+				0,
+				0,
+				this.targetWidth,
+				this.targetHeight
+			);
 		});
 	}
 }
