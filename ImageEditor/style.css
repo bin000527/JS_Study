@@ -1,0 +1,90 @@
+main, body{
+    height: 100%;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #ccc;
+}
+
+.fileImage{
+    width: 100%;
+}
+
+.editor_wrap, .image_wrap{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 20px;
+}
+
+.canvas_wrap{
+    border: 2px solid #aaa;
+}
+
+.editor_wrap canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.image_wrap{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    border: 2px solid #aaa;
+
+    /* width: 100%;
+    height: 100%; */
+    /* max-width: 100%;
+    max-height: 100%; */
+}
+
+.image_wrap canvas{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.drag_area{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border: 2px dashed #6c67e3;
+    color: #4f49ec;
+}
+
+.drag_area input[type="file"]{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.button_wrap{
+    display: flex;
+    flex-direction: column;
+    /* position: absolute;
+    right: 15px;
+    bottom: 20px; */
+}
+
+.button_wrap button{
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
